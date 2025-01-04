@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f7f4f8;
+        margin: 0;
+        padding: 20px;
+      }
+
+      table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #347c37;
+        color: white;
+      }
+
+      /* Column colors */
+      td:nth-child(1) {
+        background-color: #b6a931;
+      }
+
+      td:nth-child(2) {
+        background-color: #328535;
+      }
+
+      td:nth-child(3) {
+        background-color: #4484a1;
+      }
+
+      .merged-cell {
+        background-color: #ffcccc;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th colspan="2">Population(in croses)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="merged-cell">
+          <td rowspan="3">India</td>
+          <td>1998</td>
+          <td>85</td>
+        </tr>
+        <tr class="merged-cell">
+          <td>1999</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td>2000</td>
+          <td>100</td>
+        </tr>
+        <tr class="merged-cell">
+          <td rowspan="3">USA</td>
+          <td>1998</td>
+          <td>30</td>
+        </tr>
+        <tr class="merged-cell">
+          <td>1999</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>2000</td>
+          <td>40</td>
+        </tr>
+        <tr class="merged-cell">
+          <td rowspan="3">UK</td>
+          <td>1998</td>
+          <td>25</td>
+        </tr>
+        <tr class="merged-cell">
+          <td>1999</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>2000</td>
+          <td>35</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
