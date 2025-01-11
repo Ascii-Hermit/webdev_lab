@@ -1,0 +1,8 @@
+Type               | Examples                                              | Characteristics
+-------------------|-------------------------------------------------------|-------------------------------------------------------------
+**Block-Level**     | `<div>`, `<h1>`, `<p>`, `<ul>`, `<form>`, `<table>`    | Takes full width, starts on a new line, can contain other block or inline elements.
+**Inline**          | `<span>`, `<a>`, `<strong>`, `<img>`, `<em>`           | Takes only as much width as needed, does not cause line breaks.
+**Empty**           | `<img>`, `<br>`, `<hr>`, `<input>`, `<meta>`           | No closing tag, no content inside, self-closing.
+**Form-Related**    | `<form>`, `<input>`, `<button>`, `<select>`, `<label>` | Used for creating forms and collecting input.
+**Metadata**        | `<meta>`, `<title>`, `<link>`, `<script>`, `<style>`  | Provides information about the document or links to external resources.
+**Grouping/Structure** | `<div>`, `<section>`, `<article>`, `<header>`, `<footer>` | Used to group content or provide document structure.
