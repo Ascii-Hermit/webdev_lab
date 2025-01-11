@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management - CRUD Operations</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #53e9ee;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      td button {
+        padding: 5px 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      td button:hover {
+        background-color: #e53935;
+      }
+
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="email"] {
+        padding: 8px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .btn:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Employee Management - CRUD ops</h2>
+      <div class="form-container">
+        <form id="employee-form">
+          <div class="form-group">
+            <label for="emp_name">Employee Name:</label>
+            <input type="text" id="emp_name" name="emp_name" required />
+          </div>
+          <div class="form-group">
+            <label for="emp_email">Employee Email:</label>
+            <input type="email" id="emp_email" name="emp_email" required />
+          </div>
+          <div class="form-group">
+            <label for="emp_salary">Employee Salary:</label>
+            <input type="number" id="emp_salary" name="emp_salary" required />
+          </div>
+          <button type="submit" class="btn">Add Employee</button>
+        </form>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="employee-table-body"></tbody>
+      </table>
+    </div>
+
+    <script>
+      // array of all the emps, we first append here, then render the table.
+      const employees = [
+        { id: 1, name: "Yashas S", email: "yashas@example.com", salary: 60000 },
+        { id: 2, name: "Zaid", email: "zaid@example.com", salary: 50000 },
+      ];
+
+      const employeeTableBody = document.getElementById("employee-table-body");
+      const employeeForm = document.getElementById("employee-form");
+      const empNameInput = document.getElementById("emp_name");
+      const empEmailInput = document.getElementById("emp_email");
+      const empSalaryInput = document.getElementById("emp_salary");
+
+      // render employees in the table
+      function renderEmployeeTable() {
+        employeeTableBody.innerHTML = "";
+        employees.forEach((employee) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${employee.name}</td>
+            <td>${employee.email}</td>
+            <td>${employee.salary}</td>
+            <td>
+              <button onclick="editEmployee(${employee.id})">Edit</button>
+              <button onclick="deleteEmployee(${employee.id})">Delete</button>
+            </td>
+          `;
+          employeeTableBody.appendChild(row);
+        });
+      }
+
+      // add employee
+      employeeForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const newEmployee = {
+          id: employees.length + 1,
+          name: empNameInput.value,
+          email: empEmailInput.value,
+          salary: empSalaryInput.value,
+        };
+        employees.push(newEmployee);
+        renderEmployeeTable();
+        employeeForm.reset();
+      });
+
+      // edit employee
+      function editEmployee(id) {
+        const employee = employees.find((emp) => emp.id === id);
+        empNameInput.value = employee.name;
+        empEmailInput.value = employee.email;
+        empSalaryInput.value = employee.salary;
+        employeeForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          employee.name = empNameInput.value;
+          employee.email = empEmailInput.value;
+          employee.salary = empSalaryInput.value;
+          renderEmployeeTable();
+          employeeForm.reset();
+        });
+      }
+
+      // delete employee
+      function deleteEmployee(id) {
+        const index = employees.findIndex((emp) => emp.id === id);
+        if (index > -1) {
+          employees.splice(index, 1);
+          renderEmployeeTable();
+        }
+      }
+      renderEmployeeTable();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Design with Bootstrap</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #3a3c3d;
+      }
+
+      .top-section {
+        background-color: #007bff;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .top-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .bottom-section {
+        padding: 60px 0; /* Increased padding to add space between top and bottom sections */
+      }
+
+      .bottom-section .section {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px; /* Increased margin-bottom to add space between each section */
+      }
+
+      .section h3 {
+        margin-bottom: 20px;
+        margin-left: 20px;
+      }
+
+      .badge-custom {
+        background-color: #007bff;
+      }
+
+      .btn-custom {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .btn-custom:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-section">
+      <h1>Welcome to my Page</h1>
+    </div>
+
+    <div class="container bottom-section">
+      <div class="row">
+        <div class="col-md-4 section">
+          <h3>Text Example</h3>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              aria-label="Email"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text">@example.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-md-4 section">
+          <h3>Button Group Example</h3>
+          <div class="btn-group" role="group" aria-label="Button group example">
+            <button type="button" class="btn btn-custom">Button 1</button>
+            <button type="button" class="btn btn-custom">Button 2</button>
+            <button type="button" class="btn btn-custom">Button 3</button>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-md-4 section">
+          <h3>Badges Example</h3>
+          <span class="badge badge-custom">New</span>
+          <span class="badge badge-custom">Sale</span>
+          <span class="badge badge-custom">Discount</span>
+          <br />
+          <br />
+          <button type="button" class="btn btn-custom">
+            Notifications <span class="badge badge-light">4</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

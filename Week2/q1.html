@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Bio-Data Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #65dde6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .form-container {
+        width: 50%;
+        margin: 50px auto;
+        background-color: rgb(51, 49, 49);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #000000;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      .gender-options,
+      .subjects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .submit-btn:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Student Bio-Data Form</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="number" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group gender-options">
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input
+            type="text"
+            id="dob"
+            name="dob"
+            placeholder="DD/MM/YYYY"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Subjects:</label>
+          <div class="subjects">
+            <input type="checkbox" id="maths" name="subjects" value="Maths" />
+            <label for="maths">Mathematics</label><br />
+            <input
+              type="checkbox"
+              id="science"
+              name="subjects"
+              value="Science"
+            />
+            <label for="science">Science</label><br />
+            <input
+              type="checkbox"
+              id="english"
+              name="subjects"
+              value="English"
+            />
+            <label for="english">English</label><br />
+            <input
+              type="checkbox"
+              id="history"
+              name="subjects"
+              value="History"
+            />
+            <label for="history">History</label><br />
+            <input
+              type="checkbox"
+              id="geography"
+              name="subjects"
+              value="Geography"
+            />
+            <label for="geography">Geography</label><br />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="4"
+            style="width: 100%; padding: 8px"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <table>
+            <tr>
+              <th>Year</th>
+              <th>Marks Obtained</th>
+            </tr>
+            <tr>
+              <td>10th Grade</td>
+              <td><input type="number" name="marks10" required /></td>
+            </tr>
+            <tr>
+              <td>12th Grade</td>
+              <td><input type="number" name="marks12" required /></td>
+            </tr>
+          </table>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
