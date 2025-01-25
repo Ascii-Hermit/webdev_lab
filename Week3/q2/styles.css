@@ -1,0 +1,33 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+#greeting-container {
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+#greeting {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#clock {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ffeb3b;
+}
