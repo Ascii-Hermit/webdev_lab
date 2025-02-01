@@ -1,0 +1,52 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Alternate row colors */
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 15px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+/* Styling the image */
+#image {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+/* Content wrapper */
+#content-wrapper {
+  display: inline-block;
+  position: relative;
+  transition: transform 2s ease-in-out;
+}
+
+#move-button {
+  display: inline-flex; /* Use inline-flex if you want it to behave like an inline element */
+  align-items: center; /* Vertically centers the text inside the button */
+  justify-content: center; /* Horizontally centers the text inside the button */
+  padding: 10px 20px; /* Adds space around the text */
+  background-color: #4caf50; /* Example background color */
+  color: white; /* Text color */
+  border: none; /* Removes the border */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Makes the button clickable */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
