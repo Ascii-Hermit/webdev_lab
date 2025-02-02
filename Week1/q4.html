@@ -1,104 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fancy Table</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background: #f7f4f8;
-        margin: 0;
-        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
-
       table {
-        width: 80%;
-        margin: 0 auto;
+        width: 50%;
         border-collapse: collapse;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
       }
-
       th,
       td {
-        padding: 15px;
-        text-align: center;
-        border: 1px solid #ddd;
+        border: 1px solid black;
+        padding: 10px;
       }
-
       th {
-        background-color: #347c37;
+        background-color: red;
         color: white;
       }
-
-      /* Column colors */
-      td:nth-child(1) {
-        background-color: #b6a931;
-      }
-
-      td:nth-child(2) {
-        background-color: #328535;
-      }
-
-      td:nth-child(3) {
-        background-color: #4484a1;
-      }
-
-      .merged-cell {
-        background-color: #ffcccc;
+      .country {
+        background-color: #ffdd99;
         font-weight: bold;
+      }
+      .year {
+        background-color: #99b3e6;
+      }
+      .population {
+        background-color: #a8d08d;
       }
     </style>
   </head>
   <body>
     <table>
-      <thead>
-        <tr>
-          <th>Country</th>
-          <th colspan="2">Population(in croses)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="merged-cell">
-          <td rowspan="3">India</td>
-          <td>1998</td>
-          <td>85</td>
-        </tr>
-        <tr class="merged-cell">
-          <td>1999</td>
-          <td>90</td>
-        </tr>
-        <tr>
-          <td>2000</td>
-          <td>100</td>
-        </tr>
-        <tr class="merged-cell">
-          <td rowspan="3">USA</td>
-          <td>1998</td>
-          <td>30</td>
-        </tr>
-        <tr class="merged-cell">
-          <td>1999</td>
-          <td>35</td>
-        </tr>
-        <tr>
-          <td>2000</td>
-          <td>40</td>
-        </tr>
-        <tr class="merged-cell">
-          <td rowspan="3">UK</td>
-          <td>1998</td>
-          <td>25</td>
-        </tr>
-        <tr class="merged-cell">
-          <td>1999</td>
-          <td>30</td>
-        </tr>
-        <tr>
-          <td>2000</td>
-          <td>35</td>
-        </tr>
-      </tbody>
+      <tr>
+        <th>Country</th>
+        <th colspan="2">Population (In Crores)</th>
+      </tr>
+      <tr>
+        <td class="country" rowspan="3">INDIA</td>
+        <td class="year">1998</td>
+        <td class="population">85</td>
+      </tr>
+      <tr>
+        <td class="year">1999</td>
+        <td class="population">90</td>
+      </tr>
+      <tr>
+        <td class="year">2000</td>
+        <td class="population">100</td>
+      </tr>
+      <tr>
+        <td class="country" rowspan="3">USA</td>
+        <td class="year">1998</td>
+        <td class="population">30</td>
+      </tr>
+      <tr>
+        <td class="year">1999</td>
+        <td class="population">35</td>
+      </tr>
+      <tr>
+        <td class="year">2000</td>
+        <td class="population">40</td>
+      </tr>
+      <tr>
+        <td class="country" rowspan="3">UK</td>
+        <td class="year">1998</td>
+        <td class="population">25</td>
+      </tr>
+      <tr>
+        <td class="year">1999</td>
+        <td class="population">30</td>
+      </tr>
+      <tr>
+        <td class="year">2000</td>
+        <td class="population">35</td>
+      </tr>
     </table>
   </body>
 </html>

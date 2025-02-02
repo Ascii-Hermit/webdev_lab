@@ -6,3 +6,33 @@ Type               | Examples                                              | Cha
 **Form-Related**    | `<form>`, `<input>`, `<button>`, `<select>`, `<label>` | Used for creating forms and collecting input.
 **Metadata**        | `<meta>`, `<title>`, `<link>`, `<script>`, `<style>`  | Provides information about the document or links to external resources.
 **Grouping/Structure** | `<div>`, `<section>`, `<article>`, `<header>`, `<footer>` | Used to group content or provide document structure.
+
+
+##HTML
+To insert a image:
+`<img src="image.jpg" alt="Description of image">`
+
+
+To insert a video:
+`<video controls>
+    <source src="video.mp4" type="video/mp4">
+</video>`
+
+In the forms html tag:
+    1>> The pattern followed is label-input
+    2>> The "for" attibute matches the input to the label
+    3>> The "name" attibute is used as the key when json files are sent
+    4>> "id" in input must match exactly with the "for" in the label 
+    5>> Instead of `<input>`, `<textarea>`can also be used for large spaces of text
+    6>> Use the `<placeholder>` tag
+
+In the button tag:
+    submit: Submits form data and removes the data
+    reset: Clears form data
+    button: Creates a clickable button with no default action
+
+##CSS
+ For a gradient 
+ >> background: linear-gradient(to top, #f7f4f8, #8c00ff);
+
+ Add this to prevent different background for all divs >> background-attachment: fixed;

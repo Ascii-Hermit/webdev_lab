@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <title>Student Bio-Data Form</title>
     <style>
       body {
         font-family: Arial, sans-serif;
         background-color: #65dde6;
-        margin: 0;
+        margin: 5px;
         padding: 0;
       }
 
@@ -25,7 +25,9 @@
         text-align: center;
         color: #000000;
       }
-
+      form {
+        margin-right: 7px;
+      }
       .form-group {
         margin-bottom: 15px;
       }
@@ -106,7 +108,7 @@
       <form>
         <div class="form-group">
           <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" placeholder="" id="name" name="name" required />
         </div>
 
         <div class="form-group">
