@@ -18,6 +18,8 @@ To insert a video:
     <source src="video.mp4" type="video/mp4">
 </video>`
 
+In `<table>` tag use the `<thead>` and the `<tbody>` tags
+
 In the forms html tag:
     1>> The pattern followed is label-input
     2>> The "for" attibute matches the input to the label
