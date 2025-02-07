@@ -1,0 +1,17 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  box-shadow: 0 4px 8px;
+  padding: 40px;
+}
+#text {
+  font-size: 18px;
+}
