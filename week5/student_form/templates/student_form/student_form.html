@@ -1,0 +1,72 @@
+<!-- student_app/templates/student_app/student_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details Form</title>
+  </head>
+  <body>
+    <h2>Enter Student Details</h2>
+
+    <form method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if student_details %}
+    <h3>Student Details</h3>
+    <textarea rows="10" cols="50" readonly>
+            Name: {{ student_details.name }}
+            Date of Birth: {{ student_details.dob }}
+            Address: {{ student_details.address }}
+            Contact: {{ student_details.contact }}
+            Email: {{ student_details.email }}
+            Marks:
+                English: {{ student_details.english_marks }}
+                Physics: {{ student_details.physics_marks }}
+                Chemistry: {{ student_details.chemistry_marks }}
+            Total Marks: {{ student_details.total_marks }}
+            Percentage: {{ percentage }} %
+        </textarea
+    >
+    {% endif %}
+  </body>
+</html>
+<!-- student_app/templates/student_app/student_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details Form</title>
+  </head>
+  <body>
+    <h2>Enter Student Details</h2>
+
+    <form method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if student_details %}
+    <h3>Student Details</h3>
+    <textarea rows="10" cols="50" readonly>
+            Name: {{ student_details.name }}
+            Date of Birth: {{ student_details.dob }}
+            Address: {{ student_details.address }}
+            Contact: {{ student_details.contact }}
+            Email: {{ student_details.email }}
+            Marks:
+                English: {{ student_details.english_marks }}
+                Physics: {{ student_details.physics_marks }}
+                Chemistry: {{ student_details.chemistry_marks }}
+            Total Marks: {{ student_details.total_marks }}
+            Percentage: {{ percentage }} %
+        </textarea
+    >
+    {% endif %}
+  </body>
+</html>
