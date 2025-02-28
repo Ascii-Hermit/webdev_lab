@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="reviews-page">
+      <h1>Book Reviews</h1>
+      <p>Review 1: "An amazing book!"</p>
+      <p>Review 2: "A great read, couldn't put it down!"</p>
+      <p>Review 3: "One of the best books of the year!"</p>
+      <p><a href="{% url 'home' %}">Back to Home</a></p>
+    </div>
+  </body>
+</html>

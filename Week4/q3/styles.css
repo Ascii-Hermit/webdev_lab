@@ -13,7 +13,7 @@ body {
 
 #container {
   display: flex;
-  flex-direction: row;
+  flex-direction: rowcd;
   justify-content: center;
   align-items: center;
   width: 100%;

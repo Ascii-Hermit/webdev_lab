@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metadata</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="metadata-page">
+      <h1>Book Metadata</h1>
+      <p>Title: The Great Adventure</p>
+      <p>Author: John Doe</p>
+      <p>ISBN: 123-4567890123</p>
+      <p>Published: 2025</p>
+      <p><a href="{% url 'home' %}">Back to Home</a></p>
+    </div>
+  </body>
+</html>

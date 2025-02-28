@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+}
+
+.home-page img {
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  display: inline;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
