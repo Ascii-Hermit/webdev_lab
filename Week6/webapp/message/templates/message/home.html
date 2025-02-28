@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Formatter</title>
+    <style>
+        /* Style for the name */
+        .formatted-name {
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        /* Style for the message */
+        .formatted-text {
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Bold and italics styles */
+        .bold {
+            font-weight: bold;
+        }
+        
+        .italic {
+            font-style: italic;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Enter Your Name and Message</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ name }}">
+
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message">{{ message }}</textarea>
+
+        <br><br>
+
+        <label for="bold">Bold:</label>
+        <input type="checkbox" id="bold" name="bold" {% if bold %}checked{% endif %}>
+
+        <label for="italic">Italic:</label>
+        <input type="checkbox" id="italic" name="italic" {% if italic %}checked{% endif %}>
+
+        <label for="underline">Underline:</label>
+        <input type="checkbox" id="underline" name="underline" {% if underline %}checked{% endif %}>
+
+        <br><br>
+
+        <label for="color">Select Color:</label>
+        <select name="color" id="color">
+            <option value="black" {% if color == 'black' %}selected{% endif %}>Black</option>
+            <option value="red" {% if color == 'red' %}selected{% endif %}>Red</option>
+            <option value="blue" {% if color == 'blue' %}selected{% endif %}>Blue</option>
+            <option value="green" {% if color == 'green' %}selected{% endif %}>Green</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Display Message</button>
+    </form>
+
+    <hr>
+
+    {% if name and message %}
+    <h2>Formatted Message:</h2>
+    <p class="formatted-name {% if bold %}bold{% endif %} {% if italic %}italic{% endif %} {% if underline %}underline{% endif %}" style="color: {{ color }};">
+        Name:{{ name }}
+    </p>
+    <p class="formatted-text {% if bold %}bold{% endif %} {% if italic %}italic{% endif %} {% if underline %}underline{% endif %}" style="color: {{ color }};">
+        Message:{{ message }}
+    </p>
+    {% endif %}
+</body>
+</html>

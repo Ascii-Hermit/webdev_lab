@@ -1,0 +1,16 @@
+/* styles.css */
+
+.formatted-name {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.formatted-text {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+}
