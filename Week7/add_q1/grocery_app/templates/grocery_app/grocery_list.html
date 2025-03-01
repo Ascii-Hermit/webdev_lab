@@ -1,0 +1,63 @@
+<!-- grocery_app/templates/grocery_app/grocery_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Checklist</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 2px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Grocery Checklist</h2>
+
+    <form method="POST">
+      {% csrf_token %}
+      <label><strong>Select Items</strong></label
+      ><br /><br />
+
+      {% for item in grocery_items %}
+      <input type="checkbox" name="items" value="{{ item.name }}" /> {{
+      item.name }} ({{ item.price }} USD)<br />
+      {% endfor %}
+
+      <br />
+      <button type="submit">Add Item</button>
+    </form>
+
+    {% if selected_items %}
+    <h3>Selected Items</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in selected_items %}
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+  </body>
+</html>
