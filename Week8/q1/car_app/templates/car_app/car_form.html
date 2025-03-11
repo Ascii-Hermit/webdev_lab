@@ -1,0 +1,18 @@
+<!-- car_app/templates/car_app/car_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Manufacturer Form</title>
+  </head>
+  <body>
+    <h2>Car Manufacturer Form</h2>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <!-- Displays the form fields -->
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

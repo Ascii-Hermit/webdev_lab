@@ -1,0 +1,16 @@
+<!-- car_app/templates/car_app/display_car.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Manufacturer Result</title>
+  </head>
+  <body>
+    <h2>Car Information</h2>
+    <p><strong>Manufacturer:</strong> {{ manufacturer }}</p>
+    <p><strong>Model Name:</strong> {{ model_name }}</p>
+    <a href="{% url 'car_form' %}">Go back</a>
+  </body>
+</html>

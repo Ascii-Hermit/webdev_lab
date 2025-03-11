@@ -1,0 +1,21 @@
+<!-- user_info/templates/user_info/secondPage.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Page</title>
+  </head>
+  <body>
+    <h2>Second Page</h2>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Roll:</strong> {{ roll }}</p>
+    <p><strong>Subject:</strong> {{ subject }}</p>
+
+    <br />
+    <button onclick="window.location.href='{% url 'first_page' %}'">
+      Go Back to First Page
+    </button>
+  </body>
+</html>
