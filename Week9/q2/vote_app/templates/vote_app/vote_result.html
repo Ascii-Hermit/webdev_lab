@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote Result</title>
+  </head>
+  <body>
+    <h1>Vote Results for "ASP.NET with C# by Vipul Prakashan"</h1>
+
+    <p>
+      <strong>Good:</strong> {{ good_percentage|floatformat:2 }}% ({{ good_votes }} votes)
+    </p>
+    <p>
+      <strong>Satisfactory:</strong> {{ satisfactory_percentage|floatformat:2 }}% ({{ satisfactory_votes }}
+      votes)
+    </p>
+    <p>
+      <strong>Bad:</strong> {{ bad_percentage|floatformat:2 }}% ({{ bad_votes }}
+      votes)
+    </p>
+
+    <p>Total Votes: {{ total_votes }}</p>
+  </body>
+</html>
