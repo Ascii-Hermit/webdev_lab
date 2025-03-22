@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Directory</title>
+</head>
+<body>
+    <h1>Welcome to the Website Directory!</h1>
+
+    <p>Explore our categories and find useful websites.</p>
+
+    <h2>Navigation</h2>
+
+    <ul>
+        <li><a href="{% url 'category_list' %}">View Categories</a></li>
+        <li><a href="{% url 'page_list' %}">View Pages</a></li>
+        <li><a href="{% url 'category_create' %}">Add New Category</a></li>
+        <li><a href="{% url 'page_create' %}">Add New Page</a></li>
+    </ul>
+</body>
+</html>

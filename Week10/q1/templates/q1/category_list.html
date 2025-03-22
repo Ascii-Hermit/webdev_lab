@@ -1,0 +1,7 @@
+<h1>Categories</h1>
+<ul>
+    {% for category in categories %}
+    <li><a href="{% url 'category_detail' category.pk %}">{{ category.name }}</a> (Visits: {{ category.visits }}, Likes: {{ category.likes }})</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'category_create' %}">Add Category</a>
